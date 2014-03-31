@@ -1,0 +1,70 @@
+
+.imagenescalable{
+	width:100%;
+	max-width:300px;
+	}
+.categoria{
+	color: #333333;
+	font-size: 50%;
+}
+.capaerrores{
+	display:none;
+	font-size: 12px;
+	background-color: #FFB7B9;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	margin-top: 3px;
+	font-weight: 100;
+	color: #900;
+	/*
+	color: #A50505;
+	*/
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 25px;
+	width: 182px;
+}
+.capaexito{
+	display:none;
+	font-size: 12px;
+	background-color: #8bea92;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	padding: 5px;
+	margin-top: 3px;
+	font-weight: 100;
+	color: #276d2c;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 25px;
+	width: 182px;
+}
+
+
+.formularios input:focus {
+	background: #FF3; 
+	border:1px solid #F00; 
+	box-shadow: 0 0 3px #aaa;
+	padding-right:15%;
+}
+.Centro {
+	text-align: center;
+	font-size: 20px;
+		font-weight: 100;
+}
+.Tema4 {
+	background-image: url(../images/azulado111Largo.jpg);
+}
+.fondo {
+	background-image: url(../images/azulado111LargoArriba.jpg);
+}
+#tareas .ui-grid-c .ui-block-a {
+	color: #FFF;
+}
+#tareas div h1 {
+	text-align: center;
+}
