@@ -18,7 +18,7 @@ $(document).ready(function(){
     	},
     	error: function(objeto, exception) {
             if (objeto.status === 0) {
-                alert('No conectado.');
+                alert('No conectado...');
             } else if (objeto.status == 404) {
                 alert('La pagina no se encuentra. [404]');
             } else if (objeto.status == 500) {
@@ -54,17 +54,17 @@ $("#guardar").click(function(){
 
 });
 
-function cargar(idAlumno){
+function cargar(id){
     
    $.ajax({
 		type: "POST",
 		url:"http://ivanapp.hol.es/AppProfesorCore/llenar_formulario.php",
-		data: {id:idAlumno},
+		data: {id:id},
 		success: function(resp)
 		{ 
 		  var datos = eval(resp);
-             $("input[name='idAlumnoForm']").val(datos[0].id)
-             $("input[name='strNombreForm']").val(datos[0].nombre);  
+             $("input[name='id']").val(datos[0].id)
+             $("input[name='strNombreForm']").val(datos[0].strnombreSelect);  
              $("input[name='strApellidoForm']").val(datos[0].apellido);        
              $("input[name='strDniForm']").val(datos[0].dni);
              $("input[name='refCategoriaForm']").val(datos[0].categoria);
