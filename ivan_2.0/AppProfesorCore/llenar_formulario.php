@@ -9,11 +9,11 @@ header('Access-Control-Allow-Origin: *');
  */
 
 $id = $_POST['id'];
-$sql=mysql_query("select * from tblalumno where idAlumno='$id'");
+$sql = mysql_query( "SELECT * FROM tblAlumno WHERE idAlumno='$id'");
 $arr = array();
     $obj = mysql_fetch_object($sql);
     $arr[] = array('id' => $obj->idAlumno,
-                   'nombre' => utf8_encode($obj->strNombre),
+                   'strnombreSelect' => utf8_encode($obj->strNombre),
                    'apellido' => utf8_encode($obj->strApellido),
                    'dni' => $obj->strDni,
                    'categoria' => $obj->refCategoria,

@@ -5,18 +5,24 @@
 <title>App Colegios</title>
 	<link href="css/estilo.css" rel="stylesheet" type="text/css"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
-<!--
+
 	<link href="jquery-mobile/jquery.mobile-1.4.0.min.css" rel="stylesheet" type="text/css"/>
+<!--
 	<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
 	<script src="jquery-mobile/jquery-1.6.4.min.js" type="text/javascript"></script>
-	<script src="jquery-mobile/jquery.mobile-1.0.min.js" type="text/javascript"></script>
+	
+    <script src="jquery-mobile/jquery.mobile-1.0.min.js" type="text/javascript"></script>
 -->
+<!--
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />
-	<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+-->
+
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+	<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
 
 
+    
 <!-- Todos los JS en un Directorio -->	
 	<script src="Rest/ajax.js"></script>  <!-- CARGA Automáticamente los dastos desde la Bd MySQL -->
 	<script src="js/alumno.js"></script>  <!-- TODO lo relacionado con el ALUMNO -->
@@ -40,7 +46,7 @@
 			<li data-role="list-divider"></li>
             <li><br><a href="#page4">Insertar Alumnos</a><br></li>
             <li data-role="list-divider"></li>
-            <li><br><a href="#page7">Ver Alumnos</a><br></li>
+            <li><br><a href="#modificar">Ver Alumnos</a><br></li>
             <li data-role="list-divider"></li>
             <li><br><a href="#page6">Añadir Nuevo Curso</a><br></li>
          	
@@ -76,19 +82,19 @@
 
 
 <!-- ***********************************  Ver Alumnos **************************************** -->
-<div data-role="page" id="page7" data-add-back-btn="true">
+<div data-role="page" id="modificar" data-add-back-btn="true">
 	<div data-role="header">
 		<h1>Seleccionar Alumnos</h1>
 	</div>
 	<div data-role="content">	
-	<form id="formcursos" name="formcursos">		
-        <div data-role="fieldcontain">
-        <label for="refCategoriaLista" class="select">Seleccionar el Curso deseado:</label>
-        <select name="refCategoriaLista" id="refCategoriaLista">
-        </select>
-	      <input type="button" class="boton" value="Ver" id="botoncategorialista" onClick="botoncategorialista1();" />
-        </div>
-     </form>
+		<form id="formcursos" name="formcursos">		
+        	<div data-role="fieldcontain">
+        		<label for="refCategoriaLista" class="select">Seleccionar el Curso deseado:</label><br>
+        		<select name="refCategoriaLista" id="refCategoriaLista">
+        		</select>
+	    		  <input type="button" class="boton" value="Ver" id="botoncategorialista" onClick="botoncategorialista1();" />
+        	</div>
+     	</form>
      
  
     <div data-role="collapsibleset">
@@ -146,7 +152,7 @@
 
 
 <!-- ****************************  Modificar Alumnos **************************************** -->
-<div data-role="popup" id="modificaralumno" data-theme="a" class="ui-corner-all" data-add-back-btn="true">
+<div data-role="popup" id="modificaralumno"  name="modificaralumno" data-theme="a" class="ui-corner-all" data-add-back-btn="true">
 	
 	<div data-role="header">
 		<h1 align="center">Modificar Alumnos</h1>
@@ -158,31 +164,33 @@
        <div style="padding:10px 20px;">
        <div data-role="fieldcontain">
               <input type="hidden" name="id" id="id"  />
-	    <label for="strNombre">Nombre ... :</label>
-	    <input type="text" name="strNombre" id="strNombreForm" value=""  /><br>
+              
+        <label for="strNombre">Nombre ... :</label>
+	    <input type="text" name="strNombreForm" id="strNombreForm" value=""  /><br>
         </div>
        <div data-role="fieldcontain"> 
         <label for="strApellido">Apellido ... :</label>
-	    <input type="text" name="strApellido" id="strApellidoForm" value=""  /><br>
+	    <input type="text" name="strApellidoForm" id="strApellidoForm" value=""  /><br>
         </div>
         <div data-role="fieldcontain">
         <label for="strDni">Dni ........... :</label>
-	    <input type="text" name="strDni" id="strDniForm" value=""  /><br>
+	    <input type="text" name="strDniForm" id="strDniForm" value=""  /><br>
 	   </div>
          <div data-role="fieldcontain">        
 	    <label for="strDni" >Curso ...... :</label>
-	    <input type="text" name="refCategoria" id="refCategoriaForm" value=""  /><br>
-	    </div>
-        <select name="refCategoria" id="refCategoriaListaModificar" align="center"></select>
+	    <select name="refCategoriaListaModificarForm" id="refCategoriaListaModificarForm" align="center"></select>
 	   	</div>
-
+	</div>
+    
 <div class="capaerrores" id="aviso3">Debes completar todos los campos.</div>
 <div class="capaexito" id="exito3">Muchas gracias, Alumno MODIFICADO.</div><br>
-
-	     <input type="button" class="boton" value="Modificar Alumnos" id="botonmodificar" />
-               <a href="#page7">
-              <input type="button" class="boton" value="Listar Alumnos"  />
-            </a>
+	
+    		<input type="button" value="Guardar Aeon1" id="guardar" />
+           	<input type="button" value="Guardar Aeon1_2" id="guardar1_2"  onClick="guardar1();" />
+           
+              	 <a href="#modificar">
+              		<input type="button" class="boton" value="Listar Alumnos"  />
+            	</a>
         </form>
       </div>	
 			

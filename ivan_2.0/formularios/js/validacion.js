@@ -59,7 +59,6 @@ function validateformmodificar()
 	document.formmodificar.strNombreForm.style.border='1px solid #EEEEEE';
 	document.formmodificar.strApellidoForm.style.border='1px solid #EEEEEE';
 	document.formmodificar.strDniForm.style.border='1px solid #EEEEEE';
-	document.formmodificar.refCategoriaForm.style.border='1px solid #EEEEEE';
 	
 	//COLORES
 	if (document.formmodificar.strNombreForm.value == ""){
@@ -75,11 +74,6 @@ function validateformmodificar()
 	if (document.formmodificar.strDniForm.value == ""){
 		$("#aviso3").show("slow");
 		document.formmodificar.strDniForm.style.border='1px solid red';
-	    valid = false;
-	}
-	if (document.formmodificar.refCategoriaForm.value == ""){
-		$("#aviso3").show("slow");
-		document.formmodificar.refCategoriaForm.style.border='1px solid red';
 	    valid = false;
 	}
 	return valid;

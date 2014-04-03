@@ -2,10 +2,10 @@
 # FileName="Connection_php_mysql.htm"
 # Type="MYSQL"
 # HTTP="true"
-$hostname_appconexion = "xx.xx.xx";
-$database_appconexion = "xxxxx";
-$username_appconexion = "xx";
-$password_appconexion = "xxxxxx";
+$hostname_appconexion = "mysql.hostinger.es";
+$database_appconexion = "u816705532_mysql";
+$username_appconexion = "u816705532_root";
+$password_appconexion = "XaPaPoTee2y";
 
 
 #Si acepta el servidor web la conexion PERSISTENTE poner la p en mysql_p..... 

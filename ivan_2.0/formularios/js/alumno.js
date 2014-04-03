@@ -73,34 +73,6 @@ function botoncategorialista1() {
 
 var AlumnoSeleccionado = ''; 
 
-/*
-
-Está en funciones.js... Lo he pasado aqui.. pero NO FUNCIONAAA
-
-Es lo que me hizo muy amablemete y desinteresadamente "Aeon1"  Encontrado en http://www.phonegapspain.com/forums/phonegap/
- 
-<!-- ***************** Boton MODIFICAR dentro del COLLAPSIBLE ************* -->
-function cargar(id){
-    
-   $.ajax({
-		type: "POST",
-		url:"http://ivanapp.hol.es/AppProfesorCore/llenar_formulario.php",
-		data: {id:id},
-		success: function(resp)
-		{ 
-		  var datos = eval(resp);
-            $("input[name='id']").val(datos[0].id)
-             $("input[name='nombre']").val(datos[0].nombre);  
-             $("input[name='apellido']").val(datos[0].apellido);        
-             $("input[name='dni']").val(datos[0].dni);
-             $("input[name='categoria']").val(datos[0].categoria);
-		 $.mobile.navigate( '#modificaralumno',{transition : 'slide'} );
-		}
-		}); 
- }
-
-*/
-
 function EliminarAlumno() {
 			if (AlumnoSeleccionado == '') {
 				alert('Debe serleccionar un Alumno para Eliminar');

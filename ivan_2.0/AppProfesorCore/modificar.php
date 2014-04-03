@@ -6,13 +6,21 @@ header('Access-Control-Allow-Origin: *');
 /**
  * @author Aeon1
  * @copyright 2014
- */
+*/
+
  $id=$_POST['id'];
- $nombre=$_POST['nombre'];
- $apellido=$_POST['apellido'];
- $dni=$_POST['dni'];
- $categoria=$_POST['categoria'];
-mysql_query("UPDATE tblalumno SET strNombre='$nombre',strApellido='$apellido',strDni='$dni',refCategoria='$categoria' WHERE idAlumno='$id'");
+ $nombre=$_POST['strNombreForm'];
+ $apellido=$_POST['strApellidoForm'];
+ $dni=$_POST['strDniForm'];
+ $categoria=$_POST['refCategoriaListaModificarForm'];
+
+ /*
+ $categoria=$_POST['strCategoriaForm'];
+*/
+
+
+mysql_query("UPDATE tblAlumno SET strNombre='$nombre',strApellido='$apellido',strDni='$dni',refCategoria='$categoria' WHERE idAlumno='$id'");
 
 echo "datos modificados con exito";
+
 ?>
